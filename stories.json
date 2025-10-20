@@ -1,7 +1,7 @@
 {
   "quantumContainer": {
     "title": "Quantum Storm: Ground Station",
-    "audioSrc": "audio/nisha_kiran_convo.mp3",
+    "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986271/nisha_kiran_convo_idpisg.wav",
     "transcript": [
       { "speaker": "Nisha", "start": 0, "end": 5, "text": "All quantum channels are stable. Entangled photon streams show zero decoherence." },
       { "speaker": "Kiran", "start": 6, "end": 10, "text": "Detectors calibrated perfectly. No interference from atmospheric turbulence." },
@@ -29,7 +29,7 @@
   },
     "elecEnggContainer": {
         "title": "Power Grid & Solar Flares",
-        "audioSrc": "audio/Het_Nisha_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986253/het_nisha_convo_z0wqmm.wav",
         "transcript": [
             { "speaker": "Het", "start": 0, "end": 5, "text": "Morning, Nisha. All substations look normal, voltages stable, and load balanced." },
             { "speaker": "Nisha", "start": 5, "end": 14, "text": "Good, Het. But I just got a space weather alert: a Coronal Mass Ejection (CME) is expected to hit Earth in the next few hours." },
@@ -57,7 +57,7 @@
     },
     "farmerContainer": {
         "title": "Farm & Solar Storms",
-        "audioSrc": "audio/vatsal_farah_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986438/vatsal_farah_convo_wnqdsc.wav",
         "transcript": [
             { "speaker": "Farah", "start": 0, "end": 2, "text": "Good morning, Vatsal! The crops look healthy today." },
             { "speaker": "Vatsal", "start": 2, "end": 14, "text": "Morning, Farah. They’re thriving. But I just received a space weather alert—Coronal Mass Ejection (CME) expected to impact Earth’s magnetosphere today." },
@@ -85,7 +85,7 @@
     },
     "astroArjunContainer": {
         "title": "ISS Emergency: Astronauts' View",
-        "audioSrc": "audio/Arjun_anika_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985861/arjun_anika_convo_hjgwfp.wav",
         "transcript": [
             { "speaker": "Arjun", "start": 0, "end": 5, "text": "Commander Anika, everything looks stable. Earth is peaceful, and the instruments are normal." },
             { "speaker": "Anika", "start": 5, "end": 12, "text": "Yes, Arjun. But the Sun can surprise us at any moment. Even up here, space weather can change rapidly." },
@@ -116,7 +116,7 @@
     },
     "photographerNishitaContainer": {
         "title": "Aurora Chasers",
-        "audioSrc": "audio/nishita_tara_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986426/nishita_tara_convo_qlvtai.wav",
         "transcript": [
             { "speaker": "Nishita", "start": 0, "end": 4, "text": "Tonight’s auroras are going to be incredible—I can feel it!" },
             { "speaker": "Tara", "start": 4, "end": 8, "text": "The sky looks calm… are you sure the flare will make them appear?" },
@@ -142,7 +142,7 @@
     },
     "captainMarco": {
         "title": "Maritime Navigation Flare",
-        "audioSrc": "audio/marco_sofia_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986256/marco_sofia_convo_lslufg.wav",
         "transcript": [
             { "speaker": "Captain Marco", "start": 0, "end": 6, "text": "The ocean looks endless and calm tonight. Perfect for navigation." },
             { "speaker": "First Mate Sofia", "start": 6, "end": 11, "text": "Aye, Captain. Stars above, waves below—easy to find our way." },
@@ -169,7 +169,7 @@
     },
     "astronautAlexContainer": {
         "title": "Space Station Flare",
-        "audioSrc": "audio/Alex_riya_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985776/Alex_riya_convo_xdhwjd.wav",
         "transcript": [
             { "speaker": "Alex", "start": 0, "end": 6, "text": "Commander Riya, Earth looks so calm from here. It feels unreal." },
             { "speaker": "Riya", "start": 6, "end": 17, "text": "Yes, Alex. But never forget—the Sun controls space weather, and it can change suddenly. Even small changes can affect satellites and astronauts." },
@@ -195,7 +195,7 @@
     },
     "pilotPriyaContainer": {
         "title": "Pilot & Solar Flare",
-        "audioSrc": "audio/Priya_Nila_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986431/Priya_Nila_convo_wwzx0l.wav",
         "transcript": [
             { "speaker": "Priya", "start": 0, "end": 5, "text": "Control, this is Flight 72. The skies are calm, engines steady, passengers relaxed." },
             { "speaker": "Nila", "start": 5, "end": 11, "text": "Good to hear, Priya. Just remember—space weather can sometimes affect flights, especially near the poles." },
@@ -220,7 +220,7 @@
     },
     "marineBiologistAishaContainer": {
         "title": "Deep Sea Solar Wind",
-        "audioSrc": "audio/aisha_ravi_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985773/aisha_ravi_convo_oslcud.wav",
         "transcript": [
             { "speaker": "Dr. Aisha", "start": 0, "end": 9, "text": "These hydrophones are mapping whale calls across 200 km. With satellite relays, we track their migration perfectly." },
             { "speaker": "Ravi", "start": 9, "end": 16, "text": "Data link is crystal clear. Ocean currents and salinity readings are syncing with the satellites." },
@@ -250,7 +250,7 @@
     },
     "satelliteSamContainer": {
         "title": "Satellite Sam's Storm",
-        "audioSrc": "audio/sam_mira_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986435/sam_mira_convo_okkfsc.wav",
         "transcript": [
             { "speaker": "Sam", "start": 0, "end": 5, "text": "Hello, Professor Mira! Earth looks so calm and pretty from up here." },
             { "speaker": "Mira", "start": 5, "end": 13, "text": "Glad to hear, Sam. But remember, space can change quickly. We must always stay prepared." },
@@ -269,7 +269,7 @@
     },
     "astronomerAmyContainer": {
         "title": "Observatory: Solar Wind",
-        "audioSrc": "audio/Amy_Leo_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985795/Amy_Leo_convo_sot6tz.wav",
         "transcript": [
             { "speaker": "Amy", "start": 0, "end": 11, "text": "Leo, look! The solar wind is stronger tonight. I can see the auroras forming. It’s... breathtaking!" },
             { "speaker": "Leo", "start": 11, "end": 18, "text": "Whoa! It almost looks like the sky is alive. Do you really think it’s safe to observe it so closely?" },
@@ -293,7 +293,7 @@
     },
     "balloonContainer": {
         "title": "High-Altitude Balloon SEP",
-        "audioSrc": "audio/abrar_sana_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985772/abrar_sana_convo_j4gkfs.wav",
         "transcript": [
             { "speaker": "Abrar", "start": 0, "end": 5, "text": "Sana, all instruments are calibrated. This balloon will reach 35 km—right into the stratosphere." },
             { "speaker": "Sana", "start": 5, "end": 11, "text": "Looks perfect, Abrar. But the Sun’s been unusually active. Do you think we’ll face any solar particles?" },
@@ -317,7 +317,7 @@
     },
     "spaceBotanistContainer": {
         "title": "Space Botanist & SEP",
-        "audioSrc": "audio/Leela_raj_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986257/Leela_raj_convo_mmgoxz.wav",
         "transcript": [
             { "speaker": "Leela", "start": 0, "end": 6, "text": "Commander, the lettuce and beans are thriving—microgravity farming is working better than expected." },
             { "speaker": "Raj", "start": 6, "end": 12, "text": "Excellent, Leela. Someday astronauts on Mars will thank you for this food research." },
@@ -342,7 +342,7 @@
     },
     "glacierContainer": {
         "title": "Glacier Research & SEPs",
-        "audioSrc": "audio/Omar_lina_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760986429/Omar_lina_convo_xdwkcl.wav",
         "transcript": [
             { "speaker": "Lina", "start": 0, "end": 9, "text": "These layers hold thousands of years of climate history—volcano eruptions, ancient temperatures, even solar activity." },
             { "speaker": "Omar", "start": 9, "end": 15, "text": "Our sensors are logging ice density, radiation traces, and isotopes. Everything is stable." },
@@ -372,7 +372,7 @@
     },
     "astroAnikaContainer": {
         "title": "Anika & Mission Control",
-        "audioSrc": "audio/Anika_MC_convo.mp3",
+        "audioSrc": "https://res.cloudinary.com/docy6d2mr/video/upload/v1760985854/Anika_MC_convo_grtuxd.wav",
         "transcript": [
             { "speaker": "Anika", "start": 0, "end": 6, "text": "Mission Control, it’s a beautiful day in orbit. Earth looks peaceful, and my instruments are stable." },
             { "speaker": "MC", "start": 6, "end": 13, "text": "Copy that, Anika. But remember—space weather can change suddenly. We’re monitoring solar activity." },
