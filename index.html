@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic-Tales</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Team logo -->
+    <div class="team-header">
+        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760980477/Team_logo_ytqx7i.jpg" alt="Team_logo">
+    </div>
+
+    <!-- Solar Animation Background -->
+    <div class="solar-animation-container">
+        <video autoplay muted loop class="bgVideo" id="bgVideo" type="video/mp4"></video>
+    </div>
+
+    <!-- Cover text and CTA -->
+    <div class="cover">
+        <div class="title">
+            <h2>Cosmic-Tales</h2>
+            <p>From fiery flares to dancing auroras, explore the Sun's secrets with us.</p>
+        </div>
+        <button class="CTA" id="ctaButton">Explore</button>
+    </div>
+
+    <script>
+        // 🎥 List of available background videos with corresponding button version
+        const videos = [
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980484/V5_l6zbxm.mp4", btnClass: "v1" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980483/V4_tktqva.mp4", btnClass: "v2" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980482/V3_b9rtmi.mp4", btnClass: "v3" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980482/V1_rh6guf.mp4", btnClass: "v4" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980481/V2_jsuiry.mp4", btnClass: "v5" }
+        ];
+
+        // 🎲 Randomly select one video
+        const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+        const videoElement = document.getElementById("bgVideo");
+        videoElement.src = randomVideo.src;
+
+        // ✨ Fade-in animation for smooth transition
+        videoElement.style.opacity = 0;
+        videoElement.addEventListener('loadeddata', () => {
+            setTimeout(() => {
+                videoElement.style.transition = "opacity 1.5s ease";
+                videoElement.style.opacity = 0.7;
+            }, 300);
+        });
+
+        // 🪐 CTA button
+        const CTA = document.getElementById('ctaButton');
+        // Remove any previous version classes and add the one matching the video
+        CTA.classList.remove('v1','v2','v3','v4','v5');
+        CTA.classList.add(randomVideo.btnClass);
+
+        function animateHome() {
+            CTA.style.visibility = 'visible';
+            setTimeout(() => {
+                CTA.style.width = '140px';
+            }, 10);
+        }
+
+        // 🚀 Navigate to next page
+        CTA.addEventListener('click', () => {
+            window.location.href = "phenomena.html"; 
+        });
+
+        // Run animation
+        animateHome();
+    </script>
+</body>
+</html>

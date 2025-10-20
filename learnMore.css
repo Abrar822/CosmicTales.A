@@ -1,0 +1,235 @@
+.learnMoreContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  top: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  animation: fade-in 1s forwards;
+  min-height: calc(100dvh - 70px);
+}
+
+/* Definition / Intro section */
+.learnMoreContainer .intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.learnMoreContainer .intro h2 {
+  font-size: 2rem;
+  color: #2fa2cf;
+  margin-bottom: 10px;
+}
+
+.learnMoreContainer .intro p {
+  margin: 10px 0;
+  font-size: 1.25rem;
+}
+
+/* Section title */
+.learnMoreContainer .sectionTitle {
+  margin: 20px auto;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2fa2cf;
+}
+
+/* Content / Cards */
+.learnMoreContainer .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  gap: 0px;
+}
+
+.learnMoreContainer .content .card {
+  height: 300px;
+  width: 220px;
+  border-radius: 20px;
+  background-color: #ffffff45;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+.learnMoreContainer .content .card:hover {
+  transform: scale(1.05);
+}
+
+.learnMoreContainer .card p {
+  font-size: 1.25rem;
+}
+/* Profile Card Specific */
+.learnMoreContainer .content .card img.profile {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px; /* rectangle with soft corners */
+  margin-bottom: 10px;
+}
+
+.learnMoreContainer .content .card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+.learnMoreContainer .content .card p {
+  font-size: 1.25rem;
+  color: #ddd;
+  
+}
+/* Definition Card Style */
+.learnMoreContainer .content .card.definition {
+  display: flex;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  padding: 15px 20px;
+  background-color: #ffffff25;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin: 10px auto; /* centers the card */
+}
+
+.learnMoreContainer .content .card.definition:hover {
+  transform: scale(1.03);
+  background-color: #ffffff35;
+}
+
+.learnMoreContainer .content .card.definition .term {
+  flex: 0 0 180px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  border-right: 2px solid #ffcc00;
+  padding-right: 10px;
+}
+
+.learnMoreContainer .content .card.definition .definition-text {
+  flex: 1;
+  /* font-size: 1rem; */
+  font-size: 1.25rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/*  Mobile Responsive */
+@media (max-width: 768px) {
+  .learnMoreContainer .content .card.definition {
+    flex-direction: column; /* stack term on top of text */
+    text-align: center;
+  }
+
+  .learnMoreContainer .content .card.definition .term {
+    flex: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ffcc00;
+    padding-right: 0;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .learnMoreContainer .content .card.definition .definition-text {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .learnMoreContainer .content .card.definition {
+    padding: 12px 15px;
+  }
+
+  .learnMoreContainer .content .card.definition .term {
+    font-size: 1.5rem;
+  }
+
+  .learnMoreContainer .content .card.definition .definition-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .learnMoreContainer .content .card.horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learnMoreContainer .content .card.horizontal img.profile {
+    width: 100%;
+    height: auto;
+  }
+
+  .learnMoreContainer .content .card.horizontal .card-text {
+    text-align: center;
+  }
+}
+.sunStructure {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.sun-structure-img {
+  width: 50%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .sun-structure-img {
+    max-width: none;
+    width: 300px;
+  }
+  .learnMoreContainer .intro {
+    width: 100%;
+    padding: 10px;
+  }
+  .learnMoreContainer .intro h2 {
+    font-size: 2rem;
+  }
+  .learnMoreContainer .sectionTitle {
+    font-size: 1.75rem;
+  }
+  .learnMoreContainer .content .card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .learnMoreContainer {
+    opacity: 1;
+    animation: none;
+  }
+}

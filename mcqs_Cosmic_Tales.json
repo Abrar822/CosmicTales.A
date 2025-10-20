@@ -1,0 +1,309 @@
+{
+  "questions": [
+    {
+      "question": "Which instrument detects changes in Earth’s magnetic field?",
+      "correct_answer": "Magnetometer",
+      "incorrect_answers": ["Barometer", "Thermometer", "Altimeter"]
+    },
+    {
+      "question": "Which solar phenomenon can cause satellite electronics damage?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["Moonquake", "Aurora", "Eclipse"]
+    },
+    {
+      "question": "How are geomagnetic storms measured on Earth?",
+      "correct_answer": "K-index scale",
+      "incorrect_answers": ["Fahrenheit scale", "Beaufort scale", "Decibel scale"]
+    },
+    {
+      "question": "What is the usual effect of SEP events on astronauts?",
+      "correct_answer": "Radiation exposure",
+      "incorrect_answers": ["Low oxygen", "Cold temperature", "Weight loss"]
+    },
+    {
+      "question": "Which region of the Sun is cooler and darker?",
+      "correct_answer": "Sunspot",
+      "incorrect_answers": ["Corona", "Core", "Photosphere"]
+    },
+    {
+      "question": "What device monitors solar wind and space weather continuously?",
+      "correct_answer": "Space weather satellite",
+      "incorrect_answers": ["Seismograph", "Microscope", "Weather balloon"]
+    },
+    {
+      "question": "Which human activity is affected by strong solar storms?",
+      "correct_answer": "Airline navigation",
+      "incorrect_answers": ["Swimming", "Gardening", "Reading"]
+    },
+    {
+      "question": "What is the main cause of auroras on Earth?",
+      "correct_answer": "Charged particles from Sun",
+      "incorrect_answers": ["Wind currents", "Moonlight", "Gravity waves"]
+    },
+    {
+      "question": "Which phenomenon ejects billions of tons of solar plasma?",
+      "correct_answer": "Coronal Mass Ejection",
+      "incorrect_answers": ["Solar flare", "Lunar eclipse", "Meteor shower"]
+    },
+    {
+      "question": "Which solar event travels slower but has more material?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Solar flare", "Sunspot", "Solar wind"]
+    },
+    {
+      "question": "Which layer of the Sun emits solar wind continuously?",
+      "correct_answer": "Corona",
+      "incorrect_answers": ["Core", "Chromosphere", "Mantle"]
+    },
+    {
+      "question": "Which technology can lose signal during a geomagnetic storm?",
+      "correct_answer": "Radio communications",
+      "incorrect_answers": ["Light bulbs", "Shoes", "Paper books"]
+    },
+    {
+      "question": "Which color is most commonly seen in northern auroras?",
+      "correct_answer": "Green",
+      "incorrect_answers": ["Blue", "Red", "Orange"]
+    },
+    {
+      "question": "Which particle from Sun reaches Earth in minutes during flares?",
+      "correct_answer": "Electrons",
+      "incorrect_answers": ["Protons", "Neutrons", "Photons"]
+    },
+    {
+      "question": "What safety measure protects astronauts from SEP events?",
+      "correct_answer": "Radiation shielding",
+      "incorrect_answers": ["Oxygen mask", "Parachute", "Thermal suit"]
+    },
+    {
+      "question": "Which instrument can predict space weather effects on Earth?",
+      "correct_answer": "Space weather model",
+      "incorrect_answers": ["Compass", "Barometer", "Thermometer"]
+    },
+    {
+      "question": "Which phenomenon creates dazzling lights in Earth’s sky?",
+      "correct_answer": "Aurora",
+      "incorrect_answers": ["Rainbow", "Meteor shower", "Fog"]
+    },
+    {
+      "question": "Which solar phenomenon is measured in X-ray intensity?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["CME", "Aurora", "Solar wind"]
+    },
+    {
+      "question": "Which group relies heavily on GPS for daily work?",
+      "correct_answer": "Pilots",
+      "incorrect_answers": ["Swimmers", "Teachers", "Gardeners"]
+    },
+    {
+      "question": "Which solar wind property affects Earth’s magnetic field?",
+      "correct_answer": "Speed and density",
+      "incorrect_answers": ["Color", "Temperature", "Sound"]
+    },
+    {
+      "question": "What happens when CME interacts with Earth’s magnetosphere?",
+      "correct_answer": "Geomagnetic storm",
+      "incorrect_answers": ["Earthquake", "Volcano eruption", "Tornado"]
+    },
+    {
+      "question": "Which planet also shows auroras like Earth and Jupiter?",
+      "correct_answer": "Saturn",
+      "incorrect_answers": ["Mars", "Venus", "Mercury"]
+    },
+    {
+      "question": "What is the approximate distance between Sun and Earth?",
+      "correct_answer": "93 million miles",
+      "incorrect_answers": ["1 million miles", "1 billion miles", "50 million miles"]
+    },
+    {
+      "question": "Which solar activity can temporarily disable GPS signals?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["Rainstorm", "Moon eclipse", "Snowstorm"]
+    },
+    {
+      "question": "Which high-energy particles reach Earth during SEP events?",
+      "correct_answer": "Protons and electrons",
+      "incorrect_answers": ["Dust and ice", "Neutrons only", "Gas clouds"]
+    },
+    {
+      "question": "Which solar phenomenon occurs more frequently during solar maximum?",
+      "correct_answer": "Solar flares",
+      "incorrect_answers": ["Eclipses", "Meteor showers", "Comets"]
+    },
+    {
+      "question": "Which event can disrupt satellites’ electronics in space?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Moonlight", "Aurora", "Lunar eclipse"]
+    },
+    {
+      "question": "Which type of solar storm is safest for Earth observation?",
+      "correct_answer": "Mild flare",
+      "incorrect_answers": ["CME", "SEP", "Geomagnetic storm"]
+    },
+    {
+      "question": "Which human activity can be affected by strong solar wind?",
+      "correct_answer": "Communication networks",
+      "incorrect_answers": ["Painting", "Cooking", "Running"]
+    },
+    {
+      "question": "Which layer of Sun produces both flares and CMEs?",
+      "correct_answer": "Corona",
+      "incorrect_answers": ["Core", "Mantle", "Crust"]
+    },
+    {
+      "question": "Which planet’s magnetic field is stronger than Earth’s?",
+      "correct_answer": "Jupiter",
+      "incorrect_answers": ["Mars", "Venus", "Mercury"]
+    },
+    {
+      "question": "What type of radiation mainly reaches Earth from flares?",
+      "correct_answer": "X-rays",
+      "incorrect_answers": ["Gamma rays", "Infrared", "Sound waves"]
+    },
+    {
+      "question": "Which measurement shows the intensity of geomagnetic storms?",
+      "correct_answer": "Kp-index",
+      "incorrect_answers": ["Fahrenheit", "Beaufort", "Decibel"]
+    },
+    {
+      "question": "Which space weather phenomenon can affect astronauts outside spacecraft?",
+      "correct_answer": "SEP events",
+      "incorrect_answers": ["Solar wind only", "Aurora only", "Rain clouds"]
+    },
+    {
+      "question": "Which event releases billions of tons of hot solar plasma?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Solar flare", "Moon shadow", "Asteroid impact"]
+    },
+    {
+      "question": "Which solar activity is measured by X-ray flux satellites?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["CME", "Aurora", "Magnetosphere"]
+    },
+    {
+      "question": "Which solar particle is most harmful to astronauts in space?",
+      "correct_answer": "Proton",
+      "incorrect_answers": ["Neutron", "Electron", "Photon"]
+    },
+    {
+      "question": "What type of energy do solar flares release mostly?",
+      "correct_answer": "Electromagnetic energy",
+      "incorrect_answers": ["Mechanical energy", "Gravitational energy", "Kinetic energy"]
+    },
+    {
+      "question": "Which technology requires shielding from strong space weather?",
+      "correct_answer": "Satellites",
+      "incorrect_answers": ["Books", "Shoes", "Cars"]
+    },
+    {
+      "question": "Which event can create stunning aurora at both poles?",
+      "correct_answer": "Geomagnetic storm",
+      "incorrect_answers": ["Snowstorm", "Rainstorm", "Tsunami"]
+    },
+    {
+      "question": "Which planetary region is safest from most solar particle events?",
+      "correct_answer": "Earth’s surface",
+      "incorrect_answers": ["Space orbit", "Mars surface", "Moon surface"]
+    },
+    {
+      "question": "Which spacecraft monitors solar flares and CMEs continuously?",
+      "correct_answer": "SOHO",
+      "incorrect_answers": ["Hubble", "James Webb", "Kepler"]
+    },
+    {
+      "question": "Which phenomenon carries both particles and magnetic field lines?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Solar wind only", "Aurora only", "Moonlight"]
+    },
+    {
+      "question": "Which is a visible sign of solar storm on Earth?",
+      "correct_answer": "Aurora",
+      "incorrect_answers": ["Rainfall", "Tornado", "Fog"]
+    },
+    {
+      "question": "Which technology is disrupted by high-energy solar particles?",
+      "correct_answer": "Satellites",
+      "incorrect_answers": ["Television", "Radio", "Stoves"]
+    },
+    {
+      "question": "What determines the strength of a geomagnetic storm?",
+      "correct_answer": "CME speed and magnetic field",
+      "incorrect_answers": ["Sun color", "Moon phase", "Cloud density"]
+    },
+    {
+      "question": "Which type of solar flare is most intense on Earth?",
+      "correct_answer": "X-class flare",
+      "incorrect_answers": ["C-class flare", "M-class flare", "B-class flare"]
+    },
+    {
+      "question": "Which space environment variable changes due to solar storms?",
+      "correct_answer": "Magnetic field",
+      "incorrect_answers": ["Air pressure", "Temperature", "Humidity"]
+    },
+    {
+      "question": "Which space phenomenon can temporarily disable GPS for everyone?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["Rainstorm", "Snowstorm", "Fog"]
+    },
+    {
+      "question": "Which solar event can travel millions of miles toward Earth?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Solar flare", "Meteor", "Comet"]
+    },
+    {
+      "question": "Which solar particle is responsible for aurora formation?",
+      "correct_answer": "Electrons",
+      "incorrect_answers": ["Protons", "Neutrons", "Photons"]
+    },
+    {
+      "question": "Which weather in space can cost billions if disrupted?",
+      "correct_answer": "Geomagnetic storm",
+      "incorrect_answers": ["Rainstorm", "Earthquake", "Windstorm"]
+    },
+    {
+      "question": "Which solar phenomenon can create both aurora and blackouts?",
+      "correct_answer": "CME",
+      "incorrect_answers": ["Moonlight", "Rainfall", "Tornado"]
+    },
+    {
+      "question": "Which spacecraft studies solar energetic particles regularly?",
+      "correct_answer": "ACE",
+      "incorrect_answers": ["Hubble", "Kepler", "James Webb"]
+    },
+    {
+      "question": "Which human job is most affected by space radiation events?",
+      "correct_answer": "Astronaut",
+      "incorrect_answers": ["Teacher", "Chef", "Painter"]
+    },
+    {
+      "question": "Which region of Earth sees the strongest aurora displays?",
+      "correct_answer": "Polar regions",
+      "incorrect_answers": ["Equator", "Deserts", "Mountains"]
+    },
+    {
+      "question": "Which kind of CME is the fastest and most dangerous?",
+      "correct_answer": "Halo CME",
+      "incorrect_answers": ["Slow CME", "Partial CME", "Minor CME"]
+    },
+    {
+      "question": "Which event produces X-rays, UV, and visible light quickly?",
+      "correct_answer": "Solar flare",
+      "incorrect_answers": ["CME", "Aurora", "Rainstorm"]
+    },
+    {
+      "question": "Which particle flux can reach Earth in less than an hour?",
+      "correct_answer": "SEP",
+      "incorrect_answers": ["Dust particles", "Oxygen molecules", "Ice particles"]
+    },
+    {
+      "question": "Which protective layer helps reduce solar UV effects on Earth?",
+      "correct_answer": "Ozone layer",
+      "incorrect_answers": ["Magnetosphere", "Clouds", "Moon surface"]
+    },
+    {
+      "question": "Which event can affect airline flights and navigation systems?",
+      "correct_answer": "Geomagnetic storm",
+      "incorrect_answers": ["Rainstorm", "Earthquake", "Snowstorm"]
+    }
+  ]
+}

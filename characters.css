@@ -1,0 +1,104 @@
+.solar-animation-container {
+  display: none;
+}
+.homeContainer {
+  display: flex;
+}
+.characterContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  top: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  animation: fade-in 1s forwards;
+  min-height: calc(100dvh - 70px);
+}
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  gap: 20px;
+}
+
+.solarFlareDetail {
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.CMEDetail {
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+.solarWindDetail {
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+.solarParticlesDetail {
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.characterContainer h2 {
+  font-size: 1.75rem;
+  text-align: left;
+  margin-bottom: 15px;
+  color: #2fa2cf;
+}
+.characterContainer h2 + p {
+  margin-bottom: 25px;
+}
+
+.characterContainer span {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #2fa2cf;
+}
+.selection {
+  margin-top: 30px;
+}
+
+.characters .card {
+  height: 330px;
+  width: 250px;
+  border-radius: 20px;
+  background-color: #ffffff45;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  /* padding: 10px; */
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.characters .card:hover {
+  transform: scale(1.05);
+}
+.characters .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+@media (max-width: 850px) {
+  .characterContainer {
+    animation: none;
+    opacity: 1;
+  }
+}

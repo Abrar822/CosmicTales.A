@@ -1,0 +1,220 @@
+.quizContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    top: 10px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    animation: fade-in 1s forwards;
+    min-height: calc(100dvh - 70px);
+}
+.quizBox {
+    background-color: #ffffff45;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    animation: fade-in 1s forwards;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(47,162,207,0.2);
+    border-radius: 10px;
+}
+.quizBox .cardContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%;
+}
+.quizBox .cardContainer .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    flex: 0 0 100%;
+    padding: 5px;
+}
+.quizBox h2 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+}
+.quizBox .start {
+    width: 180px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    margin: 30px 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background-color: #ffffff;
+}
+.quizBox .start:hover {
+    transform: scale(1.02);
+    background-color: #2fa2cf;
+    color: #ffffff;
+}
+.initialContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.scoreBoard {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.scoreBoard .score {
+    font-size: 3.5rem;
+    margin: 20px 0;
+}
+.quesbar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;    
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+    /* max-height: 200px; */
+}
+.qNo {
+    align-self: flex-start;
+    padding: 5px;
+    padding-top: 0;
+}
+.question {
+    text-align: left;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content .quiz {
+    margin: 0px 0;
+    justify-self: flex-start;
+    padding: 0;
+    display: none;
+}
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+.options button {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.options button:hover {
+    transform: scale(1.02);
+}
+.handlingbar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 80%;
+    align-self: center;
+    margin: 10px 0;
+}
+.next, .back {
+    width: 180px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.next:hover, .back:hover, .options button:hover {
+    transform: scale(1.02);
+    background-color: #ffffff;
+    color: black;
+}
+@media (max-width: 850px) {
+    .quizContainer {
+        opacity: 1;
+        animation: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .quizBox {
+        animation: none;
+    }
+}
+@media (max-width: 600px) {
+    .quizContainer {
+        min-height: none;
+    }
+    .quizBox {
+        background-color: #ffffff45;
+        width: 350px;
+        height: 480px;
+        margin-top: 50px;
+        font-size: 1.5rem;
+    }
+    .quizBox .quesbar {
+        height: 130px;
+    }
+    .next, .back, .options button {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .next:hover, .back:hover, .options button:hover {
+        transform: scale(1.02);
+        background-color: transparent;
+        color: #ffffff;
+    }
+    .start:hover {
+        background-color: #ffffff;
+        color: black;
+    }
+    .handlingbar {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+    .options {
+        padding: 5px;
+        gap: 10px;
+    }
+}

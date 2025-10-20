@@ -1,0 +1,128 @@
+.referencesContainer {
+    color: #fff;
+    text-align: left;
+    padding: 60px 10%;
+    /* background: radial-gradient(circle at top, rgba(10,10,20,0.8), rgba(0,0,0,0.95)); */
+    backdrop-filter: blur(4px);
+    /* box-shadow: 0 0 20px rgba(47,162,207,0.2); */
+    border-radius: 10px;
+    animation: fadeIn 1s forwards;
+}
+
+/* Titles */
+.referencesContainer h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    color: #2fa2cf;
+    text-shadow: 0 0 10px rgba(47,162,207,0.8);
+    position: relative;
+}
+.referencesContainer h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #2fa2cf;
+    margin-top: 8px;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+.referencesContainer h3:hover::after {
+    width: 150px;
+}
+
+.referencesContainer h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #00d9ff;
+    text-shadow: 0 0 8px rgba(0,217,255,0.6);
+    transition: transform 0.3s ease;
+}
+.referencesContainer h2:hover {
+    transform: scale(1.05);
+}
+
+/* Paragraphs */
+.referencesContainer p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    animation: fadeSlide 1.2s ease-in-out;
+}
+
+/* Lists */
+.referencesContainer ul {
+    list-style: inside;
+    max-width: 700px;
+    padding-left: 0;
+    margin-left: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.referencesContainer li {
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid #2fa2cf;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.referencesContainer li:hover {
+    background: rgba(47,162,207,0.1);
+    transform: translateX(8px);
+    box-shadow: 0 0 10px rgba(47,162,207,0.3);
+}
+
+/* Links */
+.referencesContainer a {
+    color: #00d9ff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.referencesContainer a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #00d9ff;
+    transition: width 0.3s ease;
+}
+.referencesContainer a:hover {
+    color: #fff;
+}
+.referencesContainer a:hover::after {
+    width: 100%;
+}
+
+/* Subtle glowing divider */
+.referencesContainer hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #2fa2cf, transparent);
+    margin: 30px 0;
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0);}
+}
+
+@media (max-width: 850px) {
+    .referencesContainer {
+        opacity: 1;
+        animation: none;
+    }
+}

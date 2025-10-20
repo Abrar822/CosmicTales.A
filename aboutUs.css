@@ -1,0 +1,104 @@
+.aboutUsContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    min-height: calc(100dvh - 70px);
+    position: relative;
+    z-index: 4;
+    top: 10px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    animation: fade-in 1s forwards;
+}
+.aboutUsContainer .defn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.aboutUsContainer .defn h2 {
+    font-size: 2rem;
+    color: #2fa2cf;
+    margin-bottom: 10px;
+}
+
+.aboutUsContainer .defn p {
+    margin: 10px 0;
+}
+
+.aboutUsContainer .selection {
+    margin: 20px auto;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center; 
+     color: #2fa2cf;
+}
+
+/* Team / Cards style */
+.aboutUsContainer .team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+}
+
+.aboutUsContainer .team .card {
+    height: 300px;
+    width: 220px;
+    border-radius: 20px;
+    background-color: #ffffff45;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    
+}
+.aboutUsContainer .team .card .profile{
+    width:auto;
+    height:150px;
+    border-radius: 50%;
+
+}
+.aboutUsContainer .team .card:hover {
+    transform: scale(1.05);
+}
+.aboutUsContainer .card p {
+    font-size: 1rem;
+}
+/* Mobile */
+@media (max-width: 600px) {
+    .aboutUsContainer .defn {
+        width: 100%;
+        padding: 10px;
+    }
+    .aboutUsContainer .defn h2 {
+        font-size: 2rem;
+    }
+    .aboutUsContainer .selection {
+        font-size: 1.5rem;
+    }
+    .aboutUsContainer .team .card {
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-width: 850px) {
+    .aboutUsContainer {
+        opacity: 1;
+        animation: none;
+    }
+}

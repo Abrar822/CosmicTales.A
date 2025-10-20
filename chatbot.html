@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic-Tales | Chatbot</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="phenomena.css" />
+    <link rel="stylesheet" href="aboutUs.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader"></div>
+    <!-- Home Container -->
+    <div class="homeContainer section">
+      <!-- Sun and Earth -->
+      <img
+        src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760980475/sun_jhxtuv.png"
+        alt="sun"
+        class="sunImg"
+      />
+      <img
+        src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760980456/earth_makuzh.png"
+        alt="earth"
+        class="earthImg"
+      />
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbarContent">
+          <div class="logo">Cosmic<span>Tales</span></div>
+          <ul>
+            <li class="events">Events</li>
+            <li class="quiz">Quiz</li>
+            <li class="glossary">Glossary</li>
+            <li class="learnMore">Learn More</li>
+            <li class="aboutUs">About Us</li>
+            <li class="menuBtn"><i class="fa-solid fa-bars"></i></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Sidebar (mobile nav) -->
+      <div class="sidebar">
+        <ul>
+          <li class="events">
+            <span><i class="fa-solid fa-sun"></i></span> <span>Events</span>
+          </li>
+          <li class="quiz">
+            <span><i class="fa-solid fa-question-circle"></i></span>
+            <span>Quiz</span>
+          </li>
+          <li class="glossary">
+            <span><i class="fa-solid fa-book"></i></span> <span>Glossary</span>
+          </li>
+          <li class="learnMore">
+            <span><i class="fa-solid fa-lightbulb"></i></span>
+            <span>Learn More</span>
+          </li>
+          <li class="aboutUs">
+            <span><i class="fa-solid fa-users"></i></span> <span>About Us</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chatbot Container -->
+      <div class="chatbot-container cont">
+        <div id="chat-window" class="chat-window">
+          <div class="message bot-message">
+            <p>
+              Hello! Ask me anything about space weather, solar flares, auroras,
+              or other space phenomena! 🌌
+            </p>
+          </div>
+        </div>
+        <form id="chat-form" class="chat-form">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Ask about the solar wind..."
+              autocomplete="off"
+              required
+            />
+            <!-- Send button -->
+            <button type="submit" class="send-icon">
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+            <!-- Stop button (hidden by default) -->
+            <button
+              type="button"
+              id="stop-button"
+              class="stop-icon"
+              style="display: none"
+            >
+              <i class="fa-solid fa-stop"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="phenomena.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="aboutUs.js"></script>
+  </body>
+</html>

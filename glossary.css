@@ -1,0 +1,117 @@
+/* ================= Glossary Container ================= */
+.glossaryContainer {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  top: 10px;
+  color: #fff;
+  font-size: 1.25rem;
+  animation: fade-in 1s forwards;
+  min-height: calc(100dvh - 70px);
+}
+/* ================= Glossary List Container ================= */
+.container {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  gap: 20px;
+}
+/* ================= Each Term Card ================= */
+.container .card {
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #2fa2cf;
+  background: rgba(255, 255, 255, 0.05);
+  width: 90%;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+/* Hover on the whole card */
+.container .card:hover {
+  transform: scale(1.04);
+  border-color: #2fa2cf;
+}
+/* ================= Term Header ================= */
+.term {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.8px;
+  position: relative;
+  color: #2fa2cf;
+  transform-origin: left center;
+  padding-right: 20px;
+  word-break: break-word; 
+}
+/* Wrap the term text separately for scaling */
+.term-text {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+/* Hover effect: scale only the text, arrow stays fixed */
+.term:hover .term-text {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+/* Arrow icon stays fixed */
+.term i {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  color: #2fa2cf;
+  flex-shrink: 0;
+}
+/* Rotate for dropdown */
+.term i.rotate {
+  transform: rotate(180deg);
+  filter: brightness(1.2);
+}
+/* ================= Definition Area ================= */
+.defin {
+  font-size: 1.25rem;
+  color: #d9faff;
+  margin-top: 8px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.6;
+  transition: all 0.45s ease;
+  border-top: 2px solid #2fa2cf;
+  padding-top: 0;
+}
+.defin.toggle {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 8px;
+}
+/* ================= Fade-in Animation ================= */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= Responsive ================= */
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+  .term {
+    font-size: 1.5rem;
+  }
+  .defin {
+    font-size: 1.25rem;
+  }
+}
