@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- loader -->
+    <div class="loader"></div>
     <!-- Team logo -->
     <div class="team-header">
         <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760980477/Team_logo_ytqx7i.jpg" alt="Team_logo">
@@ -31,10 +33,10 @@
     <script>
         // 🎥 List of available background videos with corresponding button version
         const videos = [
-            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980484/V5_l6zbxm.mp4", btnClass: "v1" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980484/V5_l6zbxm.mp4", btnClass: "v4" },
             { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980483/V4_tktqva.mp4", btnClass: "v2" },
             { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980482/V3_b9rtmi.mp4", btnClass: "v3" },
-            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980482/V1_rh6guf.mp4", btnClass: "v4" },
+            { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980482/V1_rh6guf.mp4", btnClass: "v1" },
             { src: "https://res.cloudinary.com/docy6d2mr/video/upload/v1760980481/V2_jsuiry.mp4", btnClass: "v5" }
         ];
 
@@ -67,7 +69,11 @@
 
         // 🚀 Navigate to next page
         CTA.addEventListener('click', () => {
-            window.location.href = "phenomena.html"; 
+            document.querySelector('.loader').style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = "phenomena.html"; 
+                document.querySelector('.loader').style.display = 'none';
+            }, 200);
         });
 
         // Run animation
