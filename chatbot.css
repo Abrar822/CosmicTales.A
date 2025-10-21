@@ -1,6 +1,6 @@
 .chatbot-container {
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     height: calc(100vh - 80px);
     background: transparent; 
     border-radius: 25px;
@@ -119,18 +119,11 @@
     cursor: pointer;
     z-index: 2;
     transition: transform 0.2s;
+    padding: 5px;
 }
 .send-icon:hover {
     transform: translateY(-50%) scale(1.1);
 }
-@media (max-width: 600px) {
-    .chatbot-container {
-        width: 95%;
-        height: calc(100vh - 80px);
-    }
-    #user-input { padding: 0.5rem 3rem 0.5rem 0.5rem; }
-}
-
 .stop-icon {
   position: absolute;
   right: 45px; /* place left of send button */
@@ -147,7 +140,17 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.2s;
+  padding: 5px;
 }
 .stop-icon:hover {
   transform: translateY(-50%) scale(1.1);
+}
+@media (max-width: 600px) {
+  .chatbot-container {
+    position: absolute;
+    top: 80px; /* same height as navbar */
+    bottom: 0;
+    transform: translateX(-50%);
+    height: calc(100vh - 170px);
+  }
 }
