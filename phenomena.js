@@ -70,10 +70,7 @@ let mapper = {
     '.learnMore': 'learnMore.html',
     '.aboutUs': 'aboutUs.html',
     '.home': 'index.html',
-    '.characterContainer .card': 'story.html',
     '.references': 'references.html',
-    // '.phenomenaContainer .card': 'characters.html',
-    // '.goChar': 'characters.html',
     '.chatbot-btn': 'chatbot.html'
 };
 function switched(mapper) {
@@ -115,4 +112,5 @@ function goTo(mapper) {
         document.querySelector('.loader').style.display = 'none';
         window.location.href = `characters.html?phenomenon=${mapper}`;
     }, 200);
+
 }
