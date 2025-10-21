@@ -268,3 +268,57 @@ body {
         width: 70px;
     }
 }
+/* Cosmic Loader */
+.loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #2fa2cf 0%,
+        #2fa2cf 25%,
+        #ffffff30 25%,
+        #ffffff30 50%,
+        #2fa2cf 50%,
+        #2fa2cf 75%,
+        #ffffff30 75%,
+        #ffffff30 100%
+    );
+    animation: spin 0.7s linear infinite;
+    box-shadow: 0 0 15px #2fa2cf, 0 0 30px #ffffff55;
+    z-index: 8;
+}
+/* Optional: glowing inner dot */
+.loader::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #2fa2cf;
+}
+/* Spin animation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes loaderAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
