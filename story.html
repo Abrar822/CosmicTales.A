@@ -390,278 +390,261 @@
     </a>
     <script src="phenomena.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const startBtn = document.querySelector(".startStory");
-        const stopBtn = document.querySelector(".stopStory");
-        let reselectBtn = document.querySelector(".reselectChar");
-        const chatWindow = document.getElementById("chat-window");
-        const audioPlayer = document.getElementById("audioPlayer");
-        const storyCards = document.querySelector(".story-cards");
-        const storyContainer = document.querySelector(".storyContainer");
+          document.addEventListener("DOMContentLoaded", async () => {
+            const startBtn = document.querySelector(".startStory");
+            const stopBtn = document.querySelector(".stopStory");
+            let reselectBtn = document.querySelector(".reselectChar");
+            const chatWindow = document.getElementById("chat-window");
+            const audioPlayer = document.getElementById("audioPlayer");
+            const storyCards = document.querySelector(".story-cards");
+            const storyContainer = document.querySelector(".storyContainer");
 
-        let storyData = null;
-        let currentLineIndex = 0;
-        let typingTimeout = null;
-        let isPlaying = false;
+            let storyData = null;
+            let currentLineIndex = 0;
+            let typingTimeout = null;
+            let isPlaying = false;
 
-        // If reselect button not present (safety), create it and append next to stopBtn
-        if (!reselectBtn) {
-          reselectBtn = document.createElement("button");
-          reselectBtn.className = "reselectChar";
-          reselectBtn.style.display = "none";
-          reselectBtn.innerHTML =
-            '<i class="fa-solid fa-user"></i> Reselect Character';
-          // append after stopBtn if possible
-          if (stopBtn && stopBtn.parentNode)
-            stopBtn.parentNode.insertBefore(reselectBtn, stopBtn.nextSibling);
-          else document.body.appendChild(reselectBtn);
-        }
-
-        // Utility: reset scene visuals & chat
-        function resetScene() {
-          document
-            .querySelectorAll(".myStory")
-            .forEach((div) => (div.style.display = "none"));
-          document.querySelectorAll(".myStory img").forEach((img) => {
-            img.style.opacity = "1";
-            img.style.transform = "scale(1)";
-          });
-          chatWindow.innerHTML = "";
-          // keep container background to none or as earlier BG param logic
-          storyContainer.style.backgroundImage = "none";
-        }
-
-        // Clean stop: stop audio, clear timeouts, reset vars
-        // Main logic for stop and reselect
-        function stopStory() {
-          if (!isPlaying) return;
-          isPlaying = false;
-
-          // Stop typewriter & audio
-          clearTimeout(typingTimeout);
-          audioPlayer.pause();
-          audioPlayer.currentTime = 0;
-          audioPlayer.ontimeupdate = null;
-
-          // Reset visuals
-          resetScene();
-
-          // Enable start/disable stop
-          startBtn.disabled = false;
-          stopBtn.disabled = true;
-
-          // Show reselect button
-          reselectBtn.style.display = "inline-block";
-        }
-
-        reselectBtn.addEventListener("click", () => {
-          const section = startBtn.getAttribute("data-section") || "phenomena";
-          document.querySelector(".loader").style.display = "flex";
-          setTimeout(() => {
-            window.location.href = `phenomena.html?section=${section}`;
-            document.querySelector(".loader").style.display = "none";
-          }, 200);
-        });
-
-        // Auto-stop when story finishes
-        audioPlayer.ontimeupdate = () => {
-          if (!storyData || !isPlaying) return;
-          if (currentLineIndex >= storyData.transcript.length) return;
-
-          const line = storyData.transcript[currentLineIndex];
-          if (audioPlayer.currentTime >= line.start) {
-            showLine(currentLineIndex);
-            currentLineIndex++;
-
-            // If last line finished, stop story automatically
-            if (currentLineIndex >= storyData.transcript.length) stopStory();
-          }
-        };
-
-        // Create line bubble with data-text (typewriter will use it)
-        function createLineBubble(line, index) {
-          const bubble = document.createElement("div");
-          bubble.id = `line-${index}`;
-          bubble.className = "message";
-          bubble.style.display = "none";
-          bubble.innerHTML = `
-          <p class="speaker-name">${line.speaker}</p>
-          <div class="text-content" data-text="${line.text.replace(
-            /"/g,
-            "&quot;"
-          )}"></div>
-        `;
-          return bubble;
-        }
-
-        // Show a single line with typewriter effect
-        function showLine(index) {
-          const lineEl = document.getElementById("line-" + index);
-          if (!lineEl) return;
-          const textEl = lineEl.querySelector(".text-content");
-          const fullText = textEl.dataset.text || "";
-          lineEl.style.display = "flex";
-          textEl.textContent = "";
-
-          let charIndex = 0;
-          const typeNext = () => {
-            if (!isPlaying) return; // stop typing if story stopped
-            if (charIndex < fullText.length) {
-              textEl.textContent += fullText[charIndex++];
-              typingTimeout = setTimeout(typeNext, 40);
-            }
-          };
-          typeNext();
-
-          // Scroll into view
-          lineEl.scrollIntoView({ behavior: "smooth", block: "end" });
-
-          // Highlight active speaker image across stories
-          const speakerKey = storyData.transcript[index].speaker
-            .toLowerCase()
-            .replace(/\s+/g, "");
-          document.querySelectorAll(".myStory img").forEach((img) => {
-            const imgClasses = Array.from(img.classList).map((c) =>
-              c.toLowerCase()
-            );
-            if (imgClasses.includes(speakerKey)) {
-              img.style.transform = "scale(1.15)";
-              img.style.opacity = "1";
-            } else {
-              img.style.transform = "scale(1)";
-              img.style.opacity = "0.5";
-            }
-          });
-        }
-
-        // Load & start a story by name (in-page)
-        async function startStory(name, bg) {
-          resetScene();
-          try {
-            document.querySelector(".loader").style.display = "flex";
-            const response = await fetch(
-              "https://raw.githubusercontent.com/Abrar822/CosmicTales.A/refs/heads/main/stories.json"
-            );
-            const stories = await response.json();
-            document.querySelector(".loader").style.display = "none";
-            storyData = stories[name];
-            if (!storyData) {
-              alert(`Story "${name}" not found`);
-              return;
+            // ✅ PRELOAD stories.json once (fixes the first-click issue)
+            try {
+              const res = await fetch("https://raw.githubusercontent.com/Abrar822/CosmicTales.A/refs/heads/main/stories.json");
+              stories = await res.json();
+              console.log("Stories preloaded ✅");
+            } catch (err) {
+              console.error("Failed to preload stories:", err);
             }
 
-            // hide selection cards when a story starts
-            if (storyCards) storyCards.style.display = "none";
+            // If reselect button not present (safety), create it and append next to stopBtn
+            if (!reselectBtn) {
+              reselectBtn = document.createElement("button");
+              reselectBtn.className = "reselectChar";
+              reselectBtn.style.display = "none";
+              reselectBtn.innerHTML =
+                '<i class="fa-solid fa-user"></i> Reselect Character';
+              // append after stopBtn if possible
+              if (stopBtn && stopBtn.parentNode)
+                stopBtn.parentNode.insertBefore(reselectBtn, stopBtn.nextSibling);
+              else document.body.appendChild(reselectBtn);
+            }
 
-            chatWindow.innerHTML = "";
-            currentLineIndex = 0;
+            // Utility: reset scene visuals & chat
+            function resetScene() {
+              document
+                .querySelectorAll(".myStory")
+                .forEach((div) => (div.style.display = "none"));
+              document.querySelectorAll(".myStory img").forEach((img) => {
+                img.style.opacity = "1";
+                img.style.transform = "scale(1)";
+              });
+              chatWindow.innerHTML = "";
+              // keep container background to none or as earlier BG param logic
+              storyContainer.style.backgroundImage = "none";
+            }
 
-            // Show the story visuals container for this story (if exists)
-            const storyDiv = document.querySelector(`.${name}`);
-            if (storyDiv) storyDiv.style.display = "flex";
+            // Clean stop: stop audio, clear timeouts, reset vars
+            // Main logic for stop and reselect
+            function stopStory() {
+              if (!isPlaying) return;
+              isPlaying = false;
 
-            // If bg passed via data attribute, use it; else check storyData.bg maybe
-            if (bg) storyContainer.style.backgroundImage = `url(${bg})`;
-            else if (storyData.bg)
-              storyContainer.style.backgroundImage = `url(${storyData.bg})`;
+              // Stop typewriter & audio
+              clearTimeout(typingTimeout);
+              audioPlayer.pause();
+              audioPlayer.currentTime = 0;
+              audioPlayer.ontimeupdate = null;
 
-            // Build chat bubbles
-            storyData.transcript.forEach((line, idx) => {
-              chatWindow.appendChild(createLineBubble(line, idx));
+              // Reset visuals
+              resetScene();
+
+              // Enable start/disable stop
+              startBtn.disabled = false;
+              stopBtn.disabled = true;
+
+              // Show reselect button
+              reselectBtn.style.display = "inline-block";
+            }
+
+            reselectBtn.addEventListener("click", () => {
+              const section = startBtn.getAttribute("data-section") || "phenomena";
+              document.querySelector(".loader").style.display = "flex";
+              setTimeout(() => {
+                window.location.href = `phenomena.html?section=${section}`;
+                document.querySelector(".loader").style.display = "none";
+              }, 200);
             });
 
-            // Setup audio
-            if (storyData.audioSrc) {
-              audioPlayer.src = storyData.audioSrc;
-              document.querySelector(".loader").style.display = "flex";
-              await audioPlayer.load();
-              await audioPlayer
-                .play()
-                .catch(() => console.warn("Audio blocked or unavailable"));
-              document.querySelector(".loader").style.display = "none";
-            }
-
-            isPlaying = true;
-            startBtn.disabled = true;
-            stopBtn.disabled = false;
-            reselectBtn.style.display = "none"; // hide reselect while playing
-
-            // Sync lines with audio
+            // Auto-stop when story finishes
             audioPlayer.ontimeupdate = () => {
               if (!storyData || !isPlaying) return;
               if (currentLineIndex >= storyData.transcript.length) return;
+
               const line = storyData.transcript[currentLineIndex];
               if (audioPlayer.currentTime >= line.start) {
                 showLine(currentLineIndex);
                 currentLineIndex++;
+
+                // If last line finished, stop story automatically
+                if (currentLineIndex >= storyData.transcript.length) stopStory();
               }
             };
-          } catch (err) {
-            console.error("Error loading story:", err);
-          }
-        }
-        // Start and Stop button listeners
-        // startBtn.addEventListener("click", () => {
-        //   // hide card selection if it is visible
-        //   if (storyCards) storyCards.style.display = "none";
-        //   reselectBtn.style.display = "none";
-        //   // if the page was loaded with ?story=..., start that; else do nothing until user picks
-        //   const params = new URLSearchParams(window.location.search);
-        //   console.log('params', params)
-        //   const storyName = params.get("story");
-        //   const bgImage = params.get("bg");
-        //   console.log('storyName', storyName)
-        //   console.log('bgImage', bgImage)
-        //   if (storyName) startStory(storyName, bgImage);
-        //   console.log(storyName);
-        // });
 
-        // stopBtn.addEventListener("click", stopStory);
-
-        // // Allow clicking a card to start that story immediately (data-story & data-bg)
-        // document.querySelectorAll(".story-card").forEach((card) => {
-        //   card.style.cursor = "pointer";
-        //   card.addEventListener("click", () => {
-        //     const story = card.getAttribute("data-story");
-        //     const bg = card.getAttribute("data-bg");
-        //     if (story) {
-        //       // hide selection and start chosen story in-page
-        //       if (storyCards) storyCards.style.display = "none";
-        //       startStory(story, bg);
-        //     }
-        //   });
-        // });
-
-        // // initial UI state
-        // stopBtn.disabled = true;
-        // // storyCards default display was set in markup; keep it as-is
-        startBtn.addEventListener("click", () => {
-          if (storyCards) storyCards.style.display = "none";
-          reselectBtn.style.display = "none";
-          const params = new URLSearchParams(window.location.search);
-          console.log("params", params);
-          const storyName = params.get("story");
-          const bgImage = params.get("bg");
-          console.log("storyName", storyName);
-          console.log("bgImage", bgImage);
-          if (storyName) startStory(storyName, bgImage);
-          console.log(storyName);
-        });
-
-        stopBtn.addEventListener("click", stopStory);
-
-        document.querySelectorAll(".story-card").forEach((card) => {
-          card.style.cursor = "pointer";
-          card.addEventListener("click", () => {
-            const story = card.getAttribute("data-story");
-            const bg = card.getAttribute("data-bg");
-            if (story) {
-              if (storyCards) storyCards.style.display = "none";
-              startStory(story, bg);
+            // Create line bubble with data-text (typewriter will use it)
+            function createLineBubble(line, index) {
+              const bubble = document.createElement("div");
+              bubble.id = `line-${index}`;
+              bubble.className = "message";
+              bubble.style.display = "none";
+              bubble.innerHTML = `
+              <p class="speaker-name">${line.speaker}</p>
+              <div class="text-content" data-text="${line.text.replace(
+                /"/g,
+                "&quot;"
+              )}"></div>
+            `;
+              return bubble;
             }
+
+            // Show a single line with typewriter effect
+            function showLine(index) {
+              const lineEl = document.getElementById("line-" + index);
+              if (!lineEl) return;
+              const textEl = lineEl.querySelector(".text-content");
+              const fullText = textEl.dataset.text || "";
+              lineEl.style.display = "flex";
+              textEl.textContent = "";
+
+              let charIndex = 0;
+              const typeNext = () => {
+                if (!isPlaying) return; // stop typing if story stopped
+                if (charIndex < fullText.length) {
+                  textEl.textContent += fullText[charIndex++];
+                  typingTimeout = setTimeout(typeNext, 40);
+                }
+              };
+              typeNext();
+
+              // Scroll into view
+              lineEl.scrollIntoView({ behavior: "smooth", block: "end" });
+
+              // Highlight active speaker image across stories
+              const speakerKey = storyData.transcript[index].speaker
+                .toLowerCase()
+                .replace(/\s+/g, "");
+              document.querySelectorAll(".myStory img").forEach((img) => {
+                const imgClasses = Array.from(img.classList).map((c) =>
+                  c.toLowerCase()
+                );
+                if (imgClasses.includes(speakerKey)) {
+                  img.style.transform = "scale(1.15)";
+                  img.style.opacity = "1";
+                } else {
+                  img.style.transform = "scale(1)";
+                  img.style.opacity = "0.5";
+                }
+              });
+            }
+
+            // Load & start a story by name (in-page)
+            async function startStory(name, bg) {
+              resetScene();
+              try {
+                document.querySelector(".loader").style.display = "flex";
+                const response = await fetch(
+                  "https://raw.githubusercontent.com/Abrar822/CosmicTales.A/refs/heads/main/stories.json"
+                );
+                const stories = await response.json();
+                document.querySelector(".loader").style.display = "none";
+                storyData = stories[name];
+                if (!storyData) {
+                  alert(`Story "${name}" not found`);
+                  return;
+                }
+
+                // hide selection cards when a story starts
+                if (storyCards) storyCards.style.display = "none";
+
+                chatWindow.innerHTML = "";
+                currentLineIndex = 0;
+
+                // Show the story visuals container for this story (if exists)
+                const storyDiv = document.querySelector(`.${name}`);
+                if (storyDiv) storyDiv.style.display = "flex";
+
+                // If bg passed via data attribute, use it; else check storyData.bg maybe
+                if (bg) storyContainer.style.backgroundImage = `url(${bg})`;
+                else if (storyData.bg)
+                  storyContainer.style.backgroundImage = `url(${storyData.bg})`;
+
+                // Build chat bubbles
+                storyData.transcript.forEach((line, idx) => {
+                  chatWindow.appendChild(createLineBubble(line, idx));
+                });
+
+                // Setup audio
+                if (storyData.audioSrc) {
+                  audioPlayer.src = storyData.audioSrc;
+                  document.querySelector(".loader").style.display = "flex";
+                  await audioPlayer.load();
+                  await audioPlayer
+                    .play()
+                    .catch(() => console.warn("Audio blocked or unavailable"));
+                  document.querySelector(".loader").style.display = "none";
+                }
+
+                isPlaying = true;
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                reselectBtn.style.display = "none"; // hide reselect while playing
+
+                // Sync lines with audio
+                audioPlayer.ontimeupdate = () => {
+                  if (!storyData || !isPlaying) return;
+                  if (currentLineIndex >= storyData.transcript.length) return;
+                  const line = storyData.transcript[currentLineIndex];
+                  if (audioPlayer.currentTime >= line.start) {
+                    showLine(currentLineIndex);
+                    currentLineIndex++;
+                  }
+                };
+              } catch (err) {
+                console.error("Error loading story:", err);
+              }
+            }
+            // Start and Stop button listeners
+            startBtn.addEventListener("click", () => {
+              // hide card selection if it is visible
+              if (storyCards) storyCards.style.display = "none";
+              reselectBtn.style.display = "none";
+              // if the page was loaded with ?story=..., start that; else do nothing until user picks
+              const params = new URLSearchParams(window.location.search);
+              console.log('params', params)
+              const storyName = params.get("story");
+              const bgImage = params.get("bg");
+              console.log('storyName', storyName)
+              console.log('params', params)
+              if (storyName) startStory(storyName, bgImage);
+              console.log(storyName);
+            });
+
+            stopBtn.addEventListener("click", stopStory);
+
+            // Allow clicking a card to start that story immediately (data-story & data-bg)
+            document.querySelectorAll(".story-card").forEach((card) => {
+              card.style.cursor = "pointer";
+              card.addEventListener("click", () => {
+                const story = card.getAttribute("data-story");
+                const bg = card.getAttribute("data-bg");
+                if (story) {
+                  // hide selection and start chosen story in-page
+                  if (storyCards) storyCards.style.display = "none";
+                  startStory(story, bg);
+                }
+              });
+            });
+
+            // initial UI state
+            stopBtn.disabled = true;
+            // storyCards default display was set in markup; keep it as-is
           });
-        });
-      });
     </script>
   </body>
 </html>
