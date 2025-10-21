@@ -1,439 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic-Tales</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phenomena.css" />
+    <link rel="stylesheet" href="story.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cosmic-Tales</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="phenomena.css" />
-  <link rel="stylesheet" href="story.css" />
-</head>
-
-<body>
-  <!-- loader -->
-  <div class="loader"></div>
-  <!-- Clicking the CTA button -->
-  <div class="homeContainer section">
-    <nav class="navbar">
-      <div class="navbarContent">
-        <div class="logo">Cosmic<span>Tales</span></div>
+  <body>
+    <!-- loader -->
+    <div class="loader"></div>
+    <!-- Clicking the CTA button -->
+    <div class="homeContainer section">
+      <nav class="navbar">
+        <div class="navbarContent">
+          <div class="logo">Cosmic<span>Tales</span></div>
+          <ul>
+            <li class="events">Events</li>
+            <li class="quiz">Quiz</li>
+            <li class="glossary">Glossary</li>
+            <li class="learnMore">Learn More</li>
+            <li class="aboutUs">About Us</li>
+            <li class="menuBtn"><i class="fa-solid fa-bars"></i></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebar">
         <ul>
-          <li class="events">Events</li>
-          <li class="quiz">Quiz</li>
-          <li class="glossary">Glossary</li>
-          <li class="learnMore">Learn More</li>
-          <li class="aboutUs">About Us</li>
-          <li class="menuBtn"><i class="fa-solid fa-bars"></i></li>
+          <li class="events">
+            <span><i class="fa-solid fa-sun"></i></span> <span>Events</span>
+          </li>
+          <li class="quiz">
+            <span><i class="fa-solid fa-question-circle"></i></span>
+            <span>Quiz</span>
+          </li>
+          <li class="glossary">
+            <span><i class="fa-solid fa-book"></i></span> <span>Glossary</span>
+          </li>
+          <li class="learnMore">
+            <span><i class="fa-solid fa-lightbulb"></i></span>
+            <span>Learn More</span>
+          </li>
+          <li class="aboutUs">
+            <span><i class="fa-solid fa-users"></i></span> <span>About Us</span>
+          </li>
         </ul>
       </div>
-    </nav>
-    <div class="sidebar">
-      <ul>
-        <li class="events">
-          <span><i class="fa-solid fa-sun"></i></span> <span>Events</span>
-        </li>
-        <li class="quiz">
-          <span><i class="fa-solid fa-question-circle"></i></span>
-          <span>Quiz</span>
-        </li>
-        <li class="glossary">
-          <span><i class="fa-solid fa-book"></i></span> <span>Glossary</span>
-        </li>
-        <li class="learnMore">
-          <span><i class="fa-solid fa-lightbulb"></i></span>
-          <span>Learn More</span>
-        </li>
-        <li class="aboutUs">
-          <span><i class="fa-solid fa-users"></i></span> <span>About Us</span>
-        </li>
-      </ul>
-    </div>
 
-    <div class="story-cards">
-      <div class="story-card" data-story="astronautAlexContainer"
-        data-bg="Elements/SolarFlare/AstronautAlex/bg_astronaut_alex.jpg">
-      </div>
-      <div class="story-card" data-story="photographerNishitaContainer"
-        data-bg="Elements/SolarFlare/PhotographerNishita/bg_nishita.jpg">
-      </div>
-      <div class="story-card" data-story="captainMarco" data-bg="Elements/SolarFlare/CaptainMarco/bg_marco.jpg">
-      </div>
-      <div class="story-card" data-story="pilotPriyaContainer" data-bg="Elements/SolarFlare/PilotPriya/bg_priya.jpg">
-      </div>
-      <div class="story-card" data-story="quantumContainer"
-        data-bg="Elements/CME/QuantumCommSpecialist/bg_quantum_communication.jpg">
-      </div>
-      <div class="story-card" data-story="farmerContainer" data-bg="Elements/CME/FarmerFarah/bg_farmer.jpg">
-      </div>
-      <div class="story-card" data-story="elecEnggContainer" data-bg="Elements/CME/ElecEnggHet/bg_engineer.jpg">
-      </div>
-      <div class="story-card" data-story="astroArjunContainer" data-bg="Elements/CME/AstronautArjun/bg_arjun.jpg">
-      </div>
-      <div class="story-card" data-story="balloonContainer" data-bg="Elements/SEP/BalloonScientist/bg_balloon.jpg">
-      </div>
-      <div class="story-card" data-story="glacierContainer" data-bg="Elements/SEP/GlacierResearcher/bg_glacier.jpg">
-      </div>
-      <div class="story-card" data-story="spaceBotanistContainer"
-        data-bg="Elements/SEP/SpaceStationBotanist/bg_botanist.jpg">
-      </div>
-      <div class="story-card" data-story="astroAnikaContainer" data-bg="Elements/SEP/AstronautAnika/bg_anika.jpg">
-      </div>
-      <div class="story-card" data-story="satelliteSamContainer" data-bg="Elements/solar wind/bg_sam.jpg">
-      </div>
-      <div class="story-card" data-story="astronomerAmyContainer" data-bg="Elements/solar wind/bg_amy.jpg">
-      </div>
-      <div class="story-card" data-story="marineBiologistAishaContainer" data-bg="Elements/solar wind/bg_aisha.jpg">
-      </div>
-    </div>
-
-    <div class="storyContainer cont">
-      <!-- For Solar Flare -->
-      <div class="astronautAlexContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982296/ele_sun_2_ggc7tx.png" alt="" class="sun" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982294/ele_earth_vf6nvf.png" alt="" class="earth" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982293/ch_commander_riya_in_observatory_gfsaq0.png" alt="" class="riya" />
-        <div class="spacecraftContainer">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982292/ch_alex_in_spacecraft_jncgol.png" alt="" class="alex" />
-        </div>
-      </div>
-      <div class="photographerNishitaContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982356/ch_tara_ytkapg.png" alt="" class="tara" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982355/ch_nishita_l95cxr.png" alt="" class="nishita" />
-      </div>
-      <div class="captainMarco myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982332/ele_ship_n2d4cy.png" alt="" class="" />
-      </div>
-      <div class="pilotPriyaContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982377/officer_nila-Photoroom_grm5l0.png" alt="" class="nila" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982378/pilot_priya-Photoroom_gjxfdn.png" alt="" class="priya" />
+      <div class="story-cards">
+        <div
+          class="story-card"
+          data-story="astronautAlexContainer"
+          data-bg="Elements/SolarFlare/AstronautAlex/bg_astronaut_alex.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="photographerNishitaContainer"
+          data-bg="Elements/SolarFlare/PhotographerNishita/bg_nishita.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="captainMarco"
+          data-bg="Elements/SolarFlare/CaptainMarco/bg_marco.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="pilotPriyaContainer"
+          data-bg="Elements/SolarFlare/PilotPriya/bg_priya.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="quantumContainer"
+          data-bg="Elements/CME/QuantumCommSpecialist/bg_quantum_communication.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="farmerContainer"
+          data-bg="Elements/CME/FarmerFarah/bg_farmer.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="elecEnggContainer"
+          data-bg="Elements/CME/ElecEnggHet/bg_engineer.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="astroArjunContainer"
+          data-bg="Elements/CME/AstronautArjun/bg_arjun.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="balloonContainer"
+          data-bg="Elements/SEP/BalloonScientist/bg_balloon.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="glacierContainer"
+          data-bg="Elements/SEP/GlacierResearcher/bg_glacier.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="spaceBotanistContainer"
+          data-bg="Elements/SEP/SpaceStationBotanist/bg_botanist.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="astroAnikaContainer"
+          data-bg="Elements/SEP/AstronautAnika/bg_anika.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="satelliteSamContainer"
+          data-bg="Elements/solar wind/bg_sam.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="astronomerAmyContainer"
+          data-bg="Elements/solar wind/bg_amy.jpg"
+        ></div>
+        <div
+          class="story-card"
+          data-story="marineBiologistAishaContainer"
+          data-bg="Elements/solar wind/bg_aisha.jpg"
+        ></div>
       </div>
 
-      <!-- For CME -->
-      <div class="quantumContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982636/nisha_f8e1iq.png" alt="" class="nisha" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982634/chahat_kfmhoq.png" alt="" class="kiran" />
-      </div>
-      <div class="farmerContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982617/vatsal_ftl0r7.png" alt="" class="vatsal" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982615/farah_nrrnz9.png" alt="" class="farah" />
-      </div>
-      <div class="elecEnggContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982592/ch_het_lvooko.png" alt="" class="het" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982593/ch_nisha_gg9pw8.png" alt="" class="nisha" />
-      </div>
-      <div class="astroArjunContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982569/ch_arjun_dnw6jj.png" alt="" class="arjun" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982567/ch_anika_cc4ncs.png" alt="" class="anika" />
-      </div>
-
-      <!-- Story for SEP:- Balloon scientist -->
-      <div class="balloonContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982499/ch_sana_k7y1zd.png" alt="" class="sana" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982498/ch_abrar_zbrjt0.png" alt="" class="abrar" />
-      </div>
-      <!-- For glacier researcher -->
-      <div class="glacierContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982518/ch_lina_q0meei.png" alt="" class="lina" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982520/ch_omar_yffmt2.png" alt="" class="omar" />
-      </div>
-      <!-- space botanist container -->
-      <div class="spaceBotanistContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982543/ch_leela_pkzac6.png" alt="" class="leela" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982545/ch_raj_uvep2a.png" alt="" class="raj" />
-      </div>
-      <!-- astro anika -->
-      <div class="astroAnikaContainer myStory">
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982469/ch_AstroAnika_2_lneppr.png" alt="" class="anika" />
-        <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982472/ch_charac2_mw7cni.png" alt="" class="MC" />
-      </div>
-
-      <!-- For story 1 Solar wind:- Satellite Sam -->
-      <div class="satelliteSamContainer myStory">
-        <div class="earthstory1">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982437/professormira_jgbfvl.png" alt="earth with professor mira" width="300px" class="mira"
-            height="auto" />
-        </div>
-        <div class="satelliteContainer">
-          <div class="sam">
-            <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982440/Satellite_Sam_sijasn.png" alt="satellite sam" width="250px" height="auto"
-              class="sam" />
+      <div class="storyContainer cont">
+        <!-- For Solar Flare -->
+        <div class="astronautAlexContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982296/ele_sun_2_ggc7tx.png"
+            alt=""
+            class="sun"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982294/ele_earth_vf6nvf.png"
+            alt=""
+            class="earth"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982293/ch_commander_riya_in_observatory_gfsaq0.png"
+            alt=""
+            class="riya"
+          />
+          <div class="spacecraftContainer">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982292/ch_alex_in_spacecraft_jncgol.png"
+              alt=""
+              class="alex"
+            />
           </div>
         </div>
-        <div class="solarstrom">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982442/solar_strom_in_story_1_cqlg5j.png" alt="solar strom" width="900px" height="auto" />
+        <div class="photographerNishitaContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982356/ch_tara_ytkapg.png"
+            alt=""
+            class="tara"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982355/ch_nishita_l95cxr.png"
+            alt=""
+            class="nishita"
+          />
         </div>
-      </div>
+        <div class="captainMarco myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982332/ele_ship_n2d4cy.png"
+            alt=""
+            class=""
+          />
+        </div>
+        <div class="pilotPriyaContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982377/officer_nila-Photoroom_grm5l0.png"
+            alt=""
+            class="nila"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982378/pilot_priya-Photoroom_gjxfdn.png"
+            alt=""
+            class="priya"
+          />
+        </div>
 
-      <!-- For story 2  Solar wind:- astronomer amy -->
-      <div class="astronomerAmyContainer myStory">
-        <div class="earthstory2">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982426/Astronomer_amy_oaetom.png"
-            alt="Astronomer amy with his assistant leo and his senior professor vega" width="300px" height="auto"
-            class="amy" />
+        <!-- For CME -->
+        <div class="quantumContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982636/nisha_f8e1iq.png"
+            alt=""
+            class="nisha"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982634/chahat_kfmhoq.png"
+            alt=""
+            class="kiran"
+          />
         </div>
-        <div class="sun2">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982442/solar_strom_in_story_1_cqlg5j.png" alt="sun" width="900px" height="auto" />
+        <div class="farmerContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982617/vatsal_ftl0r7.png"
+            alt=""
+            class="vatsal"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982615/farah_nrrnz9.png"
+            alt=""
+            class="farah"
+          />
         </div>
-      </div>
+        <div class="elecEnggContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982592/ch_het_lvooko.png"
+            alt=""
+            class="het"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982593/ch_nisha_gg9pw8.png"
+            alt=""
+            class="nisha"
+          />
+        </div>
+        <div class="astroArjunContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982569/ch_arjun_dnw6jj.png"
+            alt=""
+            class="arjun"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982567/ch_anika_cc4ncs.png"
+            alt=""
+            class="anika"
+          />
+        </div>
 
-      <!-- For story 3  Solar wind:- marine biologist draisha -->
-      <div class="marineBiologistAishaContainer myStory">
-        <div class="aisha">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982435/dr.aisha_s1bwlo.png" alt="photo of dr aisha" width="auto" height="300px"
-            class="aisha" />
+        <!-- Story for SEP:- Balloon scientist -->
+        <div class="balloonContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982499/ch_sana_k7y1zd.png"
+            alt=""
+            class="sana"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982498/ch_abrar_zbrjt0.png"
+            alt=""
+            class="abrar"
+          />
         </div>
-        <div class="ravi">
-          <img src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982438/ravi_technician_uzewey.png" alt="photo of ravi technician" width="auto" height="300px"
-            class="ravi" />
+        <!-- For glacier researcher -->
+        <div class="glacierContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982518/ch_lina_q0meei.png"
+            alt=""
+            class="lina"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982520/ch_omar_yffmt2.png"
+            alt=""
+            class="omar"
+          />
         </div>
-      </div>
-      <button class="startStory">Start</button>
-      <button class="stopStory">Stop</button>
-      <button class="reselectChar" style="display:none;">
-  <i class="fa-solid fa-user"></i> Reselect Story
-</button>
+        <!-- space botanist container -->
+        <div class="spaceBotanistContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982543/ch_leela_pkzac6.png"
+            alt=""
+            class="leela"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982545/ch_raj_uvep2a.png"
+            alt=""
+            class="raj"
+          />
+        </div>
+        <!-- astro anika -->
+        <div class="astroAnikaContainer myStory">
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982469/ch_AstroAnika_2_lneppr.png"
+            alt=""
+            class="anika"
+          />
+          <img
+            src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982472/ch_charac2_mw7cni.png"
+            alt=""
+            class="MC"
+          />
+        </div>
 
+        <!-- For story 1 Solar wind:- Satellite Sam -->
+        <div class="satelliteSamContainer myStory">
+          <div class="earthstory1">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982437/professormira_jgbfvl.png"
+              alt="earth with professor mira"
+              width="300px"
+              class="mira"
+              height="auto"
+            />
+          </div>
+          <div class="satelliteContainer">
+            <div class="sam">
+              <img
+                src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982440/Satellite_Sam_sijasn.png"
+                alt="satellite sam"
+                width="250px"
+                height="auto"
+                class="sam"
+              />
+            </div>
+          </div>
+          <div class="solarstrom">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982442/solar_strom_in_story_1_cqlg5j.png"
+              alt="solar strom"
+              width="900px"
+              height="auto"
+            />
+          </div>
+        </div>
 
-      <!-- Add this inside your .storyContainer div (at the bottom) -->
-      <div class="story-chat-overlay">
-        <div id="chat-window" class="chat-window"></div>
-        <audio id="audioPlayer" style="display: none;"></audio>
+        <!-- For story 2  Solar wind:- astronomer amy -->
+        <div class="astronomerAmyContainer myStory">
+          <div class="earthstory2">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982426/Astronomer_amy_oaetom.png"
+              alt="Astronomer amy with his assistant leo and his senior professor vega"
+              width="300px"
+              height="auto"
+              class="amy"
+            />
+          </div>
+          <div class="sun2">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982442/solar_strom_in_story_1_cqlg5j.png"
+              alt="sun"
+              width="900px"
+              height="auto"
+            />
+          </div>
+        </div>
+
+        <!-- For story 3  Solar wind:- marine biologist draisha -->
+        <div class="marineBiologistAishaContainer myStory">
+          <div class="aisha">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982435/dr.aisha_s1bwlo.png"
+              alt="photo of dr aisha"
+              width="auto"
+              height="300px"
+              class="aisha"
+            />
+          </div>
+          <div class="ravi">
+            <img
+              src="https://res.cloudinary.com/docy6d2mr/image/upload/v1760982438/ravi_technician_uzewey.png"
+              alt="photo of ravi technician"
+              width="auto"
+              height="300px"
+              class="ravi"
+            />
+          </div>
+        </div>
+        <button class="startStory">Start</button>
+        <button class="stopStory">Stop</button>
+        <button class="reselectChar" style="display: none">
+          <i class="fa-solid fa-user"></i> Reselect Story
+        </button>
+
+        <!-- Add this inside your .storyContainer div (at the bottom) -->
+        <div class="story-chat-overlay">
+          <div id="chat-window" class="chat-window"></div>
+          <audio id="audioPlayer" style="display: none"></audio>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Chatbot Floating Button -->
-  <a href="chatbot.html" class="chatbot-btn" title="Chatbot">
-    <i class="fa-solid fa-robot"></i>
-    <span class="chatbot-label">Chatbot</span>
-  </a>
-  <script src="phenomena.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.querySelector(".startStory");
-  const stopBtn = document.querySelector(".stopStory");
-  let reselectBtn = document.querySelector(".reselectChar");
-  const chatWindow = document.getElementById("chat-window");
-  const audioPlayer = document.getElementById("audioPlayer");
-  const storyCards = document.querySelector(".story-cards");
-  const storyContainer = document.querySelector(".storyContainer");
+    <!-- Chatbot Floating Button -->
+    <a href="chatbot.html" class="chatbot-btn" title="Chatbot">
+      <i class="fa-solid fa-robot"></i>
+      <span class="chatbot-label">Chatbot</span>
+    </a>
+    <script src="phenomena.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const startBtn = document.querySelector(".startStory");
+        const stopBtn = document.querySelector(".stopStory");
+        let reselectBtn = document.querySelector(".reselectChar");
+        const chatWindow = document.getElementById("chat-window");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const storyCards = document.querySelector(".story-cards");
+        const storyContainer = document.querySelector(".storyContainer");
 
-  let storyData = null;
-  let currentLineIndex = 0;
-  let typingTimeout = null;
-  let isPlaying = false;
+        let storyData = null;
+        let currentLineIndex = 0;
+        let typingTimeout = null;
+        let isPlaying = false;
 
-  // If reselect button not present (safety), create it and append next to stopBtn
-  if (!reselectBtn) {
-    reselectBtn = document.createElement("button");
-    reselectBtn.className = "reselectChar";
-    reselectBtn.style.display = "none";
-    reselectBtn.innerHTML = '<i class="fa-solid fa-user"></i> Reselect Character';
-    // append after stopBtn if possible
-    if (stopBtn && stopBtn.parentNode) stopBtn.parentNode.insertBefore(reselectBtn, stopBtn.nextSibling);
-    else document.body.appendChild(reselectBtn);
-  }
-
-  // Utility: reset scene visuals & chat
-  function resetScene() {
-    document.querySelectorAll(".myStory").forEach(div => div.style.display = "none");
-    document.querySelectorAll(".myStory img").forEach(img => {
-      img.style.opacity = "1";
-      img.style.transform = "scale(1)";
-    });
-    chatWindow.innerHTML = "";
-    // keep container background to none or as earlier BG param logic
-    storyContainer.style.backgroundImage = "none";
-  }
-
-  // Clean stop: stop audio, clear timeouts, reset vars
-  // Main logic for stop and reselect
-function stopStory() {
-  if (!isPlaying) return;
-  isPlaying = false;
-
-  // Stop typewriter & audio
-  clearTimeout(typingTimeout);
-  audioPlayer.pause();
-  audioPlayer.currentTime = 0;
-  audioPlayer.ontimeupdate = null;
-
-  // Reset visuals
-  resetScene();
-
-  // Enable start/disable stop
-  startBtn.disabled = false;
-  stopBtn.disabled = true;
-
-  // Show reselect button
-  reselectBtn.style.display = "inline-block";
-}
-
-reselectBtn.addEventListener("click", () => {
-  const section = startBtn.getAttribute("data-section") || "phenomena";
-  window.location.href = `phenomena.html?section=${section}`;
-});
-
-// Auto-stop when story finishes
-audioPlayer.ontimeupdate = () => {
-  if (!storyData || !isPlaying) return;
-  if (currentLineIndex >= storyData.transcript.length) return;
-
-  const line = storyData.transcript[currentLineIndex];
-  if (audioPlayer.currentTime >= line.start) {
-    showLine(currentLineIndex);
-    currentLineIndex++;
-
-    // If last line finished, stop story automatically
-    if (currentLineIndex >= storyData.transcript.length) stopStory();
-  }
-};
-
-  // Create line bubble with data-text (typewriter will use it)
-  function createLineBubble(line, index) {
-    const bubble = document.createElement("div");
-    bubble.id = `line-${index}`;
-    bubble.className = "message";
-    bubble.style.display = "none";
-    bubble.innerHTML = `
-      <p class="speaker-name">${line.speaker}</p>
-      <div class="text-content" data-text="${line.text.replace(/"/g, '&quot;')}"></div>
-    `;
-    return bubble;
-  }
-
-  // Show a single line with typewriter effect
-  function showLine(index) {
-    const lineEl = document.getElementById("line-" + index);
-    if (!lineEl) return;
-    const textEl = lineEl.querySelector(".text-content");
-    const fullText = textEl.dataset.text || "";
-    lineEl.style.display = "flex";
-    textEl.textContent = "";
-
-    let charIndex = 0;
-    const typeNext = () => {
-      if (!isPlaying) return; // stop typing if story stopped
-      if (charIndex < fullText.length) {
-        textEl.textContent += fullText[charIndex++];
-        typingTimeout = setTimeout(typeNext, 40);
-      }
-    };
-    typeNext();
-
-    // Scroll into view
-    lineEl.scrollIntoView({ behavior: "smooth", block: "end" });
-
-    // Highlight active speaker image across stories
-    const speakerKey = storyData.transcript[index].speaker.toLowerCase().replace(/\s+/g, "");
-    document.querySelectorAll(".myStory img").forEach(img => {
-      const imgClasses = Array.from(img.classList).map(c => c.toLowerCase());
-      if (imgClasses.includes(speakerKey)) {
-        img.style.transform = "scale(1.15)";
-        img.style.opacity = "1";
-      } else {
-        img.style.transform = "scale(1)";
-        img.style.opacity = "0.5";
-      }
-    });
-  }
-
-  // Load & start a story by name (in-page)
-  async function startStory(name, bg) {
-    resetScene();
-
-    try {
-      const response = await fetch("stories.json");
-      const stories = await response.json();
-      storyData = stories[name];
-      if (!storyData) {
-        alert(`Story "${name}" not found`);
-        return;
-      }
-
-      // hide selection cards when a story starts
-      if (storyCards) storyCards.style.display = "none";
-
-      chatWindow.innerHTML = "";
-      currentLineIndex = 0;
-
-      // Show the story visuals container for this story (if exists)
-      const storyDiv = document.querySelector(`.${name}`);
-      if (storyDiv) storyDiv.style.display = "flex";
-
-      // If bg passed via data attribute, use it; else check storyData.bg maybe
-      if (bg) storyContainer.style.backgroundImage = `url(${bg})`;
-      else if (storyData.bg) storyContainer.style.backgroundImage = `url(${storyData.bg})`;
-
-      // Build chat bubbles
-      storyData.transcript.forEach((line, idx) => {
-        chatWindow.appendChild(createLineBubble(line, idx));
-      });
-
-      // Setup audio
-      if (storyData.audioSrc) {
-        audioPlayer.src = storyData.audioSrc;
-        await audioPlayer.load();
-        await audioPlayer.play().catch(() => console.warn("Audio blocked or unavailable"));
-      }
-
-      isPlaying = true;
-      startBtn.disabled = true;
-      stopBtn.disabled = false;
-      reselectBtn.style.display = "none"; // hide reselect while playing
-
-      // Sync lines with audio
-      audioPlayer.ontimeupdate = () => {
-        if (!storyData || !isPlaying) return;
-        if (currentLineIndex >= storyData.transcript.length) return;
-        const line = storyData.transcript[currentLineIndex];
-        if (audioPlayer.currentTime >= line.start) {
-          showLine(currentLineIndex);
-          currentLineIndex++;
+        // If reselect button not present (safety), create it and append next to stopBtn
+        if (!reselectBtn) {
+          reselectBtn = document.createElement("button");
+          reselectBtn.className = "reselectChar";
+          reselectBtn.style.display = "none";
+          reselectBtn.innerHTML =
+            '<i class="fa-solid fa-user"></i> Reselect Character';
+          // append after stopBtn if possible
+          if (stopBtn && stopBtn.parentNode)
+            stopBtn.parentNode.insertBefore(reselectBtn, stopBtn.nextSibling);
+          else document.body.appendChild(reselectBtn);
         }
-      };
-    } catch (err) {
-      console.error("Error loading story:", err);
-    }
-  }
 
-  // Start and Stop button listeners
-  startBtn.addEventListener("click", () => {
-    // hide card selection if it is visible
-    if (storyCards) storyCards.style.display = "none";
-    reselectBtn.style.display = "none";
-    // if the page was loaded with ?story=..., start that; else do nothing until user picks
-    const params = new URLSearchParams(window.location.search);
-    const storyName = params.get("story");
-    const bgImage = params.get("bg");
-    if (storyName) startStory(storyName, bgImage);
-  });
+        // Utility: reset scene visuals & chat
+        function resetScene() {
+          document
+            .querySelectorAll(".myStory")
+            .forEach((div) => (div.style.display = "none"));
+          document.querySelectorAll(".myStory img").forEach((img) => {
+            img.style.opacity = "1";
+            img.style.transform = "scale(1)";
+          });
+          chatWindow.innerHTML = "";
+          // keep container background to none or as earlier BG param logic
+          storyContainer.style.backgroundImage = "none";
+        }
 
-  stopBtn.addEventListener("click", stopStory);
+        // Clean stop: stop audio, clear timeouts, reset vars
+        // Main logic for stop and reselect
+        function stopStory() {
+          if (!isPlaying) return;
+          isPlaying = false;
 
-  // Allow clicking a card to start that story immediately (data-story & data-bg)
-  document.querySelectorAll(".story-card").forEach(card => {
-    card.style.cursor = "pointer";
-    card.addEventListener("click", () => {
-      const story = card.getAttribute("data-story");
-      const bg = card.getAttribute("data-bg");
-      if (story) {
-        // hide selection and start chosen story in-page
-        if (storyCards) storyCards.style.display = "none";
-        startStory(story, bg);
-      }
-    });
-  });
+          // Stop typewriter & audio
+          clearTimeout(typingTimeout);
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+          audioPlayer.ontimeupdate = null;
 
-  // initial UI state
-  stopBtn.disabled = true;
-  // storyCards default display was set in markup; keep it as-is
-});
-</script>
+          // Reset visuals
+          resetScene();
 
+          // Enable start/disable stop
+          startBtn.disabled = false;
+          stopBtn.disabled = true;
 
-</body>
+          // Show reselect button
+          reselectBtn.style.display = "inline-block";
+        }
 
+        reselectBtn.addEventListener("click", () => {
+          const section = startBtn.getAttribute("data-section") || "phenomena";
+          document.querySelector(".loader").style.display = "flex";
+          setTimeout(() => {
+            window.location.href = `phenomena.html?section=${section}`;
+            document.querySelector(".loader").style.display = "none";
+          }, 200);
+        });
+
+        // Auto-stop when story finishes
+        audioPlayer.ontimeupdate = () => {
+          if (!storyData || !isPlaying) return;
+          if (currentLineIndex >= storyData.transcript.length) return;
+
+          const line = storyData.transcript[currentLineIndex];
+          if (audioPlayer.currentTime >= line.start) {
+            showLine(currentLineIndex);
+            currentLineIndex++;
+
+            // If last line finished, stop story automatically
+            if (currentLineIndex >= storyData.transcript.length) stopStory();
+          }
+        };
+
+        // Create line bubble with data-text (typewriter will use it)
+        function createLineBubble(line, index) {
+          const bubble = document.createElement("div");
+          bubble.id = `line-${index}`;
+          bubble.className = "message";
+          bubble.style.display = "none";
+          bubble.innerHTML = `
+      <p class="speaker-name">${line.speaker}</p>
+      <div class="text-content" data-text="${line.text.replace(
+        /"/g,
+        "&quot;"
+      )}"></div>
+    `;
+          return bubble;
+        }
+
+        // Show a single line with typewriter effect
+        function showLine(index) {
+          const lineEl = document.getElementById("line-" + index);
+          if (!lineEl) return;
+          const textEl = lineEl.querySelector(".text-content");
+          const fullText = textEl.dataset.text || "";
+          lineEl.style.display = "flex";
+          textEl.textContent = "";
+
+          let charIndex = 0;
+          const typeNext = () => {
+            if (!isPlaying) return; // stop typing if story stopped
+            if (charIndex < fullText.length) {
+              textEl.textContent += fullText[charIndex++];
+              typingTimeout = setTimeout(typeNext, 40);
+            }
+          };
+          typeNext();
+
+          // Scroll into view
+          lineEl.scrollIntoView({ behavior: "smooth", block: "end" });
+
+          // Highlight active speaker image across stories
+          const speakerKey = storyData.transcript[index].speaker
+            .toLowerCase()
+            .replace(/\s+/g, "");
+          document.querySelectorAll(".myStory img").forEach((img) => {
+            const imgClasses = Array.from(img.classList).map((c) =>
+              c.toLowerCase()
+            );
+            if (imgClasses.includes(speakerKey)) {
+              img.style.transform = "scale(1.15)";
+              img.style.opacity = "1";
+            } else {
+              img.style.transform = "scale(1)";
+              img.style.opacity = "0.5";
+            }
+          });
+        }
+
+        // Load & start a story by name (in-page)
+        async function startStory(name, bg) {
+          resetScene();
+
+          try {
+            document.querySelector(".loader").style.display = "flex";
+            const response = await fetch("stories.json");
+            const stories = await response.json();
+            document.querySelector(".loader").style.display = "none";
+            storyData = stories[name];
+            if (!storyData) {
+              alert(`Story "${name}" not found`);
+              return;
+            }
+
+            // hide selection cards when a story starts
+            if (storyCards) storyCards.style.display = "none";
+
+            chatWindow.innerHTML = "";
+            currentLineIndex = 0;
+
+            // Show the story visuals container for this story (if exists)
+            const storyDiv = document.querySelector(`.${name}`);
+            if (storyDiv) storyDiv.style.display = "flex";
+
+            // If bg passed via data attribute, use it; else check storyData.bg maybe
+            if (bg) storyContainer.style.backgroundImage = `url(${bg})`;
+            else if (storyData.bg)
+              storyContainer.style.backgroundImage = `url(${storyData.bg})`;
+
+            // Build chat bubbles
+            storyData.transcript.forEach((line, idx) => {
+              chatWindow.appendChild(createLineBubble(line, idx));
+            });
+
+            // Setup audio
+            if (storyData.audioSrc) {
+              audioPlayer.src = storyData.audioSrc;
+              document.querySelector(".loader").style.display = "flex";
+              await audioPlayer.load();
+              await audioPlayer
+                .play()
+                .catch(() => console.warn("Audio blocked or unavailable"));
+              document.querySelector(".loader").style.display = "none";
+            }
+
+            isPlaying = true;
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+            reselectBtn.style.display = "none"; // hide reselect while playing
+
+            // Sync lines with audio
+            audioPlayer.ontimeupdate = () => {
+              if (!storyData || !isPlaying) return;
+              if (currentLineIndex >= storyData.transcript.length) return;
+              const line = storyData.transcript[currentLineIndex];
+              if (audioPlayer.currentTime >= line.start) {
+                showLine(currentLineIndex);
+                currentLineIndex++;
+              }
+            };
+          } catch (err) {
+            console.error("Error loading story:", err);
+          }
+        }
+
+        // Start and Stop button listeners
+        startBtn.addEventListener("click", () => {
+          // hide card selection if it is visible
+          if (storyCards) storyCards.style.display = "none";
+          reselectBtn.style.display = "none";
+          // if the page was loaded with ?story=..., start that; else do nothing until user picks
+          const params = new URLSearchParams(window.location.search);
+          const storyName = params.get("story");
+          const bgImage = params.get("bg");
+          if (storyName) startStory(storyName, bgImage);
+        });
+
+        stopBtn.addEventListener("click", stopStory);
+
+        // Allow clicking a card to start that story immediately (data-story & data-bg)
+        document.querySelectorAll(".story-card").forEach((card) => {
+          card.style.cursor = "pointer";
+          card.addEventListener("click", () => {
+            const story = card.getAttribute("data-story");
+            const bg = card.getAttribute("data-bg");
+            if (story) {
+              // hide selection and start chosen story in-page
+              if (storyCards) storyCards.style.display = "none";
+              startStory(story, bg);
+            }
+          });
+        });
+
+        // initial UI state
+        stopBtn.disabled = true;
+        // storyCards default display was set in markup; keep it as-is
+      });
+    </script>
+  </body>
 </html>
