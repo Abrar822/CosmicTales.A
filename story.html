@@ -540,7 +540,7 @@
 
           try {
             document.querySelector(".loader").style.display = "flex";
-            const response = await fetch("stories.json");
+            const response = await fetch("https://raw.githubusercontent.com/Abrar822/CosmicTales.A/refs/heads/main/stories.json");
             const stories = await response.json();
             document.querySelector(".loader").style.display = "none";
             storyData = stories[name];
@@ -635,3 +635,4 @@
     </script>
   </body>
 </html>
+
