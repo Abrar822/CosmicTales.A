@@ -2,9 +2,11 @@ let glossLink = "https://raw.githubusercontent.com/Abrar822/Json.A/refs/heads/ma
 let data = []
 // to get the glossary data
 async function fetcher() {
+    document.querySelector('.loader').style.display = 'flex';
     let response = await fetch(glossLink);
     data = await response.json();
     data = data.glossary;
+    document.querySelector('.loader').style.display = 'none';
     console.log(data);
 }
 // To create card
@@ -41,7 +43,9 @@ function glossaryGenerator() {
 }
 // async executor
 async function executor() {
+    document.querySelector('.loader').style.display = 'flex';
     await fetcher();
     glossaryGenerator();
+    document.querySelector('.loader').style.display = 'none';
 }
 executor();
