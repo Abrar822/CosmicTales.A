@@ -51,7 +51,7 @@
   color: #2fa2cf;
   transform-origin: left center;
   padding-right: 20px;
-  word-break: break-word; 
+  word-break: break-word;
 }
 /* Wrap the term text separately for scaling */
 .term-text {
@@ -113,5 +113,12 @@
   }
   .defin {
     font-size: 1.25rem;
+  }
+  .defin {
+    overflow: auto;
+  }
+  .defin.toggle {
+    max-height: none;
+    height: max-content;
   }
 }
